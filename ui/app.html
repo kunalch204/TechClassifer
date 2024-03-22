@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Tech Leader Classifier</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <link rel="stylesheet" href="./dropzone.min.css">
+      <link rel="stylesheet" href="./app.css">
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <div class="container">
+            <a class="navbar-brand" href="#">Tech Leader Classifier</a>
+         </div>
+      </nav>
+      <!-- Error Modal -->
+      <div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="errorModalLabel">Error</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  Can't classify image. The classifier was not able to detect the face and two eyes properly.
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container mt-5">
+         <div class="row text-center justify-content-center">
+            <!-- Elon Musk -->
+            <div class="col-md-4 col-sm-6 mb-4">
+               <div class="card shadow-sm">
+                  <img class="card-img-top" src="./images/elon_musk.jpg" alt="Elon Musk">
+                  <div class="card-body">
+                     <h5 class="card-title">Elon Musk</h5>
+                  </div>
+               </div>
+            </div>
+            <!-- Ginni Rometty -->
+            <div class="col-md-4 col-sm-6 mb-4">
+               <div class="card shadow-sm">
+                  <img class="card-img-top" src="./images/ginni_rometty.jpg" alt="Ginni Rometty">
+                  <div class="card-body">
+                     <h5 class="card-title">Ginni Rometty</h5>
+                  </div>
+               </div>
+            </div>
+            <!-- Satya Nadella -->
+            <div class="col-md-4 col-sm-6 mb-4">
+               <div class="card shadow-sm">
+                  <img class="card-img-top" src="./images/satya_nadella.jpg" alt="Satya Nadella">
+                  <div class="card-body">
+                     <h5 class="card-title">Satya Nadella</h5>
+                  </div>
+               </div>
+            </div>
+            <!-- Sheryl Sandberg -->
+            <div class="col-md-4 col-sm-6 mb-4">
+               <div class="card shadow-sm">
+                  <img class="card-img-top" src="./images/sheryl_sandberg.jpeg" alt="Sheryl Sandberg">
+                  <div class="card-body">
+                     <h5 class="card-title">Sheryl Sandberg</h5>
+                  </div>
+               </div>
+            </div>
+            <!-- Sundar Pichai -->
+            <div class="col-md-4 col-sm-6 mb-4">
+               <div class="card shadow-sm">
+                  <img class="card-img-top" src="./images/sundar_pichai.jpg" alt="Sundar Pichai">
+                  <div class="card-body">
+                     <h5 class="card-title">Sundar Pichai</h5>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container mt-5 text-center">
+         <div class="upload-section my-5">
+            <form action="/classify_image" class="dropzone" id="image-dropzone">
+               <div class="dz-message needsclick">
+                  <img src="./images/upload.png" alt="Upload" width="50" height="50"><br>
+                  <span class="note needsclick">Drop image here or click to upload</span>
+               </div>
+            </form>
+            <button id="classifyBtn" type="button" class="btn btn-primary mt-3">Classify</button>
+         </div>
+         <div id="resultHolder" class="mb-5" style="display: none;"></div>
+         <div id="divClassTable" class="mb-5" style="display: none;">
+            <table class="table table-hover table-striped">
+               <thead class="thead-dark">
+                  <tr>
+                     <th>Tech Leader</th>
+                     <th>Probability Score</th>
+                  </tr>
+               </thead>
+               <tbody id="resultsBody">
+                  <!-- Dynamic content will be inserted here -->
+               </tbody>
+            </table>
+         </div>
+      </div>
+      </div>
+      </div>
+      <footer class="footer mt-auto py-3 bg-light">
+         <div class="container text-center">
+            <span class="text-muted">Tech Leader Classifier by Kunal Chopra.</span>
+         </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <script src="./dropzone.min.js"></script>
+      <script src="./app.js"></script>
+   </body>
+</html>
