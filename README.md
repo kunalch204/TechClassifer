@@ -52,7 +52,10 @@ To get this project up and running on your local machine, follow these steps:
     ```
 
 4. **Run the Application**
-    Start the Flask server and the UI as per the instructions in their respective directories.
+   Start the Flask server and the UI as per the instructions in their respective directories:
+    ```bash
+    python server.py
+    ```
 
 ## Contributing
 
