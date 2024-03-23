@@ -35,7 +35,7 @@ To get this project up and running on your local machine, follow these steps:
 
 1. **Clone the Repository**
     ```bash
-    git clone https://github.com/kunalch204/TechClassifer.git
+    git clone https://github.com/kunalch204/TechLeaderClassifer.git
     ```
 
 2. **Set Up the Environment**
